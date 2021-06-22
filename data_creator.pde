@@ -1,8 +1,10 @@
 void setup() {
+#create canvas
   size(128, 128);
 }
 
 void draw() {
+#each time draws a different shape
   for (int i = 0; i<3; i++) {
     background(255);
     pushMatrix();
@@ -27,6 +29,7 @@ void draw() {
     }
     popMatrix();
   }
+  #I do it only 100 times, so that in total I have 300 images to train my network
   if (frameCount == 100) {
     exit();
   }
